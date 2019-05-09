@@ -1,0 +1,29 @@
+# do Lab8.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 17:46:34 on Oct 24,2017
+# vlog -work work Lab8.vo 
+# -- Compiling module Lab8
+# 
+# Top level modules:
+# 	Lab8
+# End time: 17:46:35 on Oct 24,2017, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 17:46:35 on Oct 24,2017
+# vlog -work work Waveform.vwf.vt 
+# -- Compiling module Lab8_vlg_vec_tst
+# 
+# Top level modules:
+# 	Lab8_vlg_vec_tst
+# End time: 17:46:36 on Oct 24,2017, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vsim -novopt -c -t 1ps -L cyclonev_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.Lab8_vlg_vec_tst 
+# Start time: 17:46:36 on Oct 24,2017
+# Loading work.Lab8_vlg_vec_tst
+# Loading work.Lab8
+# after#25
+# ** Note: $finish    : Waveform.vwf.vt(103)
+#    Time: 50 ns  Iteration: 0  Instance: /Lab8_vlg_vec_tst
+# End time: 17:46:37 on Oct 24,2017, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0

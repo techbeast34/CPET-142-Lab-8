@@ -1,0 +1,302 @@
+-- Copyright (C) 2018  Intel Corporation. All rights reserved.
+-- Your use of Intel Corporation's design tools, logic functions 
+-- and other software and tools, and its AMPP partner logic 
+-- functions, and any output files from any of the foregoing 
+-- (including device programming or simulation files), and any 
+-- associated documentation or information are expressly subject 
+-- to the terms and conditions of the Intel Program License 
+-- Subscription Agreement, the Intel Quartus Prime License Agreement,
+-- the Intel FPGA IP License Agreement, or other applicable license
+-- agreement, including, without limitation, that your use is for
+-- the sole purpose of programming logic devices manufactured by
+-- Intel and sold by Intel or its authorized distributors.  Please
+-- refer to the applicable agreement for further details.
+--instand is instand at LABCELL_X43_Y1_N30
+instand = ( A1L71 ) # ( !A1L71 & ( A1L73 ) );
+
+
+--instand2 is instand2 at LABCELL_X43_Y1_N9
+instand2 = ( !A1L71 & ( A1L73 ) );
+
+
+--instand4 is instand4 at LABCELL_X43_Y1_N12
+instand4 = ( !A1L71 & ( (!A1L73 & !A1L69) ) );
+
+
+--instand5 is instand5 at LABCELL_X43_Y1_N18
+instand5 = ( A1L71 ) # ( !A1L71 & ( A1L69 ) );
+
+
+--instor2 is instor2 at LABCELL_X43_Y1_N24
+instor2 = ( A1L71 & ( (A1L69) # (A1L73) ) ) # ( !A1L71 );
+
+
+--instor3 is instor3 at LABCELL_X43_Y1_N3
+instor3 = ( A1L71 & ( A1L73 ) ) # ( !A1L71 & ( (!A1L69) # (A1L73) ) );
+
+
+--A1L61 is instand4~0 at LABCELL_X43_Y1_N39
+A1L61 = ( !A1L69 & ( !A1L73 ) );
+
+
+--instor1 is instor1 at LABCELL_X43_Y1_N42
+instor1 = ( A1L71 ) # ( !A1L71 & ( (!A1L73 & !A1L69) ) );
+
+
+--instor5 is instor5 at LABCELL_X43_Y1_N51
+instor5 = ( A1L71 & ( (!A1L73) # (A1L69) ) ) # ( !A1L71 & ( A1L69 ) );
+
+
+--instor6 is instor6 at LABCELL_X43_Y1_N57
+instor6 = ( A1L71 & ( A1L69 ) ) # ( !A1L71 & ( (!A1L73) # (A1L69) ) );
+
+
+--A1L45 is HEX3_a~output at IOOBUF_X40_Y0_N59
+A1L45 = OUTPUT_BUFFER.O(.I(!instand), , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , );
+
+
+--HEX3_a is HEX3_a at PIN_Y16
+HEX3_a = OUTPUT();
+
+
+--A1L47 is HEX3_b~output at IOOBUF_X46_Y0_N2
+A1L47 = OUTPUT_BUFFER.O(.I(instand), , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , );
+
+
+--HEX3_b is HEX3_b at PIN_W16
+HEX3_b = OUTPUT();
+
+
+--A1L49 is HEX3_c~output at IOOBUF_X40_Y0_N42
+A1L49 = OUTPUT_BUFFER.O(.I(instand2), , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , );
+
+
+--HEX3_c is HEX3_c at PIN_Y17
+HEX3_c = OUTPUT();
+
+
+--A1L51 is HEX3_d~output at IOOBUF_X46_Y0_N19
+A1L51 = OUTPUT_BUFFER.O(.I(!instand), , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , );
+
+
+--HEX3_d is HEX3_d at PIN_V16
+HEX3_d = OUTPUT();
+
+
+--A1L55 is HEX3_f~output at IOOBUF_X51_Y0_N2
+A1L55 = OUTPUT_BUFFER.O(.I(instand4), , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , );
+
+
+--HEX3_f is HEX3_f at PIN_V18
+HEX3_f = OUTPUT();
+
+
+--A1L57 is HEX3_g~output at IOOBUF_X51_Y0_N19
+A1L57 = OUTPUT_BUFFER.O(.I(!instand5), , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , );
+
+
+--HEX3_g is HEX3_g at PIN_V19
+HEX3_g = OUTPUT();
+
+
+--A1L31 is HEX2_a~output at IOOBUF_X48_Y0_N42
+A1L31 = OUTPUT_BUFFER.O(.I(GND), , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , );
+
+
+--HEX2_a is HEX2_a at PIN_Y19
+HEX2_a = OUTPUT();
+
+
+--A1L33 is HEX2_b~output at IOOBUF_X38_Y0_N53
+A1L33 = OUTPUT_BUFFER.O(.I(!instand), , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , );
+
+
+--HEX2_b is HEX2_b at PIN_AB17
+HEX2_b = OUTPUT();
+
+
+--A1L35 is HEX2_c~output at IOOBUF_X22_Y0_N53
+A1L35 = OUTPUT_BUFFER.O(.I(!instand), , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , );
+
+
+--HEX2_c is HEX2_c at PIN_AA10
+HEX2_c = OUTPUT();
+
+
+--A1L37 is HEX2_d~output at IOOBUF_X36_Y0_N19
+A1L37 = OUTPUT_BUFFER.O(.I(GND), , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , );
+
+
+--HEX2_d is HEX2_d at PIN_Y14
+HEX2_d = OUTPUT();
+
+
+--A1L39 is HEX2_e~output at IOOBUF_X38_Y0_N19
+A1L39 = OUTPUT_BUFFER.O(.I(GND), , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , );
+
+
+--HEX2_e is HEX2_e at PIN_V14
+HEX2_e = OUTPUT();
+
+
+--A1L41 is HEX2_f~output at IOOBUF_X46_Y0_N53
+A1L41 = OUTPUT_BUFFER.O(.I(GND), , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , );
+
+
+--HEX2_f is HEX2_f at PIN_AB22
+HEX2_f = OUTPUT();
+
+
+--A1L43 is HEX2_g~output at IOOBUF_X40_Y0_N76
+A1L43 = OUTPUT_BUFFER.O(.I(!A1L69), , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , );
+
+
+--HEX2_g is HEX2_g at PIN_AB21
+HEX2_g = OUTPUT();
+
+
+--A1L17 is HEX1_a~output at IOOBUF_X44_Y0_N36
+A1L17 = OUTPUT_BUFFER.O(.I(!instand4), , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , );
+
+
+--HEX1_a is HEX1_a at PIN_AA20
+HEX1_a = OUTPUT();
+
+
+--A1L19 is HEX1_b~output at IOOBUF_X40_Y0_N93
+A1L19 = OUTPUT_BUFFER.O(.I(instor2), , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , );
+
+
+--HEX1_b is HEX1_b at PIN_AB20
+HEX1_b = OUTPUT();
+
+
+--A1L23 is HEX1_d~output at IOOBUF_X43_Y0_N36
+A1L23 = OUTPUT_BUFFER.O(.I(A1L69), , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , );
+
+
+--HEX1_d is HEX1_d at PIN_AA18
+HEX1_d = OUTPUT();
+
+
+--A1L25 is HEX1_e~output at IOOBUF_X38_Y0_N36
+A1L25 = OUTPUT_BUFFER.O(.I(GND), , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , );
+
+
+--HEX1_e is HEX1_e at PIN_AB18
+HEX1_e = OUTPUT();
+
+
+--A1L29 is HEX1_g~output at IOOBUF_X51_Y0_N53
+A1L29 = OUTPUT_BUFFER.O(.I(A1L73), , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , );
+
+
+--HEX1_g is HEX1_g at PIN_U22
+HEX1_g = OUTPUT();
+
+
+--A1L3 is HEX0_a~output at IOOBUF_X52_Y0_N53
+A1L3 = OUTPUT_BUFFER.O(.I(instor3), , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , );
+
+
+--HEX0_a is HEX0_a at PIN_U21
+HEX0_a = OUTPUT();
+
+
+--A1L9 is HEX0_d~output at IOOBUF_X50_Y0_N36
+A1L9 = OUTPUT_BUFFER.O(.I(A1L61), , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , );
+
+
+--HEX0_d is HEX0_d at PIN_W21
+HEX0_d = OUTPUT();
+
+
+--A1L13 is HEX0_f~output at IOOBUF_X50_Y0_N53
+A1L13 = OUTPUT_BUFFER.O(.I(instor3), , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , );
+
+
+--HEX0_f is HEX0_f at PIN_Y21
+HEX0_f = OUTPUT();
+
+
+--A1L15 is HEX0_g~output at IOOBUF_X46_Y0_N36
+A1L15 = OUTPUT_BUFFER.O(.I(instand4), , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , );
+
+
+--HEX0_g is HEX0_g at PIN_AA22
+HEX0_g = OUTPUT();
+
+
+--A1L53 is HEX3_e~output at IOOBUF_X52_Y0_N2
+A1L53 = OUTPUT_BUFFER.O(.I(instor1), , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , );
+
+
+--HEX3_e is HEX3_e at PIN_U17
+HEX3_e = OUTPUT();
+
+
+--A1L11 is HEX0_e~output at IOOBUF_X48_Y0_N93
+A1L11 = OUTPUT_BUFFER.O(.I(instand4), , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , );
+
+
+--HEX0_e is HEX0_e at PIN_Y22
+HEX0_e = OUTPUT();
+
+
+--A1L21 is HEX1_c~output at IOOBUF_X44_Y0_N53
+A1L21 = OUTPUT_BUFFER.O(.I(instor2), , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , );
+
+
+--HEX1_c is HEX1_c at PIN_AA19
+HEX1_c = OUTPUT();
+
+
+--A1L27 is HEX1_f~output at IOOBUF_X43_Y0_N53
+A1L27 = OUTPUT_BUFFER.O(.I(instor5), , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , );
+
+
+--HEX1_f is HEX1_f at PIN_AA17
+HEX1_f = OUTPUT();
+
+
+--A1L5 is HEX0_b~output at IOOBUF_X51_Y0_N36
+A1L5 = OUTPUT_BUFFER.O(.I(instor6), , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , );
+
+
+--HEX0_b is HEX0_b at PIN_V21
+HEX0_b = OUTPUT();
+
+
+--A1L7 is HEX0_c~output at IOOBUF_X48_Y0_N76
+A1L7 = OUTPUT_BUFFER.O(.I(instor6), , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , );
+
+
+--HEX0_c is HEX0_c at PIN_W22
+HEX0_c = OUTPUT();
+
+
+--A1L71 is Y~input at IOIBUF_X33_Y0_N58
+A1L71 = INPUT_BUFFER(.I(Y), );
+
+
+--Y is Y at PIN_V13
+Y = INPUT();
+
+
+--A1L73 is Z~input at IOIBUF_X33_Y0_N41
+A1L73 = INPUT_BUFFER(.I(Z), );
+
+
+--Z is Z at PIN_U13
+Z = INPUT();
+
+
+--A1L69 is X~input at IOIBUF_X34_Y0_N1
+A1L69 = INPUT_BUFFER(.I(X), );
+
+
+--X is X at PIN_T13
+X = INPUT();
+
+
+

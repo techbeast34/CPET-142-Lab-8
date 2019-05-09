@@ -1,0 +1,197 @@
+-- Copyright (C) 2018  Intel Corporation. All rights reserved.
+-- Your use of Intel Corporation's design tools, logic functions 
+-- and other software and tools, and its AMPP partner logic 
+-- functions, and any output files from any of the foregoing 
+-- (including device programming or simulation files), and any 
+-- associated documentation or information are expressly subject 
+-- to the terms and conditions of the Intel Program License 
+-- Subscription Agreement, the Intel Quartus Prime License Agreement,
+-- the Intel FPGA IP License Agreement, or other applicable license
+-- agreement, including, without limitation, that your use is for
+-- the sole purpose of programming logic devices manufactured by
+-- Intel and sold by Intel or its authorized distributors.  Please
+-- refer to the applicable agreement for further details.
+--HEX3_a is HEX3_a
+HEX3_a = OUTPUT(A1L36);
+
+
+--HEX3_b is HEX3_b
+HEX3_b = OUTPUT(instand);
+
+
+--HEX3_c is HEX3_c
+HEX3_c = OUTPUT(instand2);
+
+
+--HEX3_d is HEX3_d
+HEX3_d = OUTPUT(A1L36);
+
+
+--HEX3_f is HEX3_f
+HEX3_f = OUTPUT(instand4);
+
+
+--HEX3_g is HEX3_g
+HEX3_g = OUTPUT(A1L35);
+
+
+--HEX2_a is HEX2_a
+HEX2_a = OUTPUT(A1L46);
+
+
+--HEX2_b is HEX2_b
+HEX2_b = OUTPUT(A1L36);
+
+
+--HEX2_c is HEX2_c
+HEX2_c = OUTPUT(A1L36);
+
+
+--HEX2_d is HEX2_d
+HEX2_d = OUTPUT(A1L46);
+
+
+--HEX2_e is HEX2_e
+HEX2_e = OUTPUT(A1L46);
+
+
+--HEX2_f is HEX2_f
+HEX2_f = OUTPUT(A1L46);
+
+
+--HEX2_g is HEX2_g
+HEX2_g = OUTPUT(A1L43);
+
+
+--HEX1_a is HEX1_a
+HEX1_a = OUTPUT(A1L33);
+
+
+--HEX1_b is HEX1_b
+HEX1_b = OUTPUT(instor2);
+
+
+--HEX1_d is HEX1_d
+HEX1_d = OUTPUT(X);
+
+
+--HEX1_e is HEX1_e
+HEX1_e = OUTPUT(A1L46);
+
+
+--HEX1_g is HEX1_g
+HEX1_g = OUTPUT(Z);
+
+
+--HEX0_a is HEX0_a
+HEX0_a = OUTPUT(instor3);
+
+
+--HEX0_d is HEX0_d
+HEX0_d = OUTPUT(A1L32);
+
+
+--HEX0_f is HEX0_f
+HEX0_f = OUTPUT(instor3);
+
+
+--HEX0_g is HEX0_g
+HEX0_g = OUTPUT(instand4);
+
+
+--HEX3_e is HEX3_e
+HEX3_e = OUTPUT(instor1);
+
+
+--HEX0_e is HEX0_e
+HEX0_e = OUTPUT(instand4);
+
+
+--HEX1_c is HEX1_c
+HEX1_c = OUTPUT(instor2);
+
+
+--HEX1_f is HEX1_f
+HEX1_f = OUTPUT(instor5);
+
+
+--HEX0_b is HEX0_b
+HEX0_b = OUTPUT(instor6);
+
+
+--HEX0_c is HEX0_c
+HEX0_c = OUTPUT(instor6);
+
+
+--Y is Y
+Y = INPUT();
+
+
+--Z is Z
+Z = INPUT();
+
+
+--instand is instand
+instand = (Z) # (Y);
+
+
+--instand2 is instand2
+instand2 = (!Y & Z);
+
+
+--X is X
+X = INPUT();
+
+
+--instand4 is instand4
+instand4 = (!Y & (!Z & !X));
+
+
+--instand5 is instand5
+instand5 = (X) # (Y);
+
+
+--instor2 is instor2
+instor2 = (!Y) # ((X) # (Z));
+
+
+--instor3 is instor3
+instor3 = ((!Y & !X)) # (Z);
+
+
+--A1L32 is instand4~0
+A1L32 = (!Z & !X);
+
+
+--instor1 is instor1
+instor1 = ((!Z & !X)) # (Y);
+
+
+--instor5 is instor5
+instor5 = ((Y & !Z)) # (X);
+
+
+--instor6 is instor6
+instor6 = ((!Y & !Z)) # (X);
+
+
+--A1L46 is ~GND
+A1L46 = GND;
+
+
+--A1L43 is X~_wirecell
+A1L43 = !X;
+
+
+--A1L36 is instand~_wirecell
+A1L36 = !instand;
+
+
+--A1L33 is instand4~_wirecell
+A1L33 = !instand4;
+
+
+--A1L35 is instand5~_wirecell
+A1L35 = !instand5;
+
+
